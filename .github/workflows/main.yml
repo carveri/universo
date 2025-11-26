@@ -1,11 +1,12 @@
 
 
-name: Mi Workflow GHA + AWS + role
+name: Mi Workflow GHA + AWS + role + permi
 on:
   push:
     branches:
       - main
-
+permissions:
+  id-token: write
 jobs:
   build:
     runs-on: ubuntu-latest
