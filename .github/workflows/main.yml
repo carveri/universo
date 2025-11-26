@@ -15,7 +15,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v5.1.1
         with:
             audience: sts.amazonaws.com
-            role-to-assume: arn:aws:iam::545009863906:role/roleawsgha
+            role-to-assume: arn:aws:iam::545009863906:role/rola+g
             aws-region: us-east-1
 
       # - name: Checkout del repositorio
