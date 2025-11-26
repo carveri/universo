@@ -6,7 +6,7 @@ import {
   GetSecretValueCommand,
 } from "@aws-sdk/client-secrets-manager";
 
-const secret_name = "CENTRO_SECRETO3";
+const secret_name = "UNIVERSO_SECRETO3";
 
 const client = new SecretsManagerClient({
   region: "us-east-1",

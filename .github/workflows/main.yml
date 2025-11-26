@@ -1,0 +1,37 @@
+
+
+name: My CI Workflow
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v5
+        with:
+            role-to-assume: githubaction-aws
+            aws-region: us-east-1
+
+      - name: Checkout del repositorio
+        uses: actions/checkout@v6
+
+      - name: Implementar node
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Iniciar node
+        run: npm run dev
+
+
+
+      
+
+
