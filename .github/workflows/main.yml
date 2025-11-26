@@ -1,6 +1,6 @@
 
 
-name: Mi Workflow GHA + AWS + role + permi
+name: Workflow GHA + AWS + roles
 on:
   push:
     branches:
@@ -14,22 +14,9 @@ jobs:
       - name: Confuguracion de las credenciales de aws
         uses: aws-actions/configure-aws-credentials@v5.1.1
         with:
-            role-to-assume: arn:aws:iam::545009863906:role/rola+g
+            role-to-assume: arn:aws:iam::545009863906:role/rolorgaroudev
             aws-region: us-east-1
 
-      # - name: Checkout del repositorio
-      #   uses: actions/checkout@v6
-
-      # - name: Implementar node
-      #   uses: actions/setup-node@v6
-      #   with:
-      #     node-version: 24
-
-      # - name: Install dependencies
-      #   run: npm install
-
-      # - name: Iniciar node
-      #   run: npm run dev
 
 
 
