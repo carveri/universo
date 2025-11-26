@@ -1,13 +1,13 @@
 
 
-name: My CI Workflow
+name: Mi Workflow GHA + AWS
 on:
   push:
     branches:
       - main
 
 jobs:
-  build-and-test:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Configure AWS Credentials
@@ -22,7 +22,7 @@ jobs:
       - name: Implementar node
         uses: actions/setup-node@v6
         with:
-          node-version: '24'
+          node-version: 24
 
       - name: Install dependencies
         run: npm install
