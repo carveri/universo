@@ -1,6 +1,6 @@
 
 
-name: Mi Workflow GHA + AWS
+name: Mi Workflow GHA + AWS + role
 on:
   push:
     branches:
@@ -17,19 +17,19 @@ jobs:
             role-to-assume: arn:aws:iam::545009863906:role/githubaction-aws
             aws-region: us-east-1
 
-      - name: Checkout del repositorio
-        uses: actions/checkout@v6
+      # - name: Checkout del repositorio
+      #   uses: actions/checkout@v6
 
-      - name: Implementar node
-        uses: actions/setup-node@v6
-        with:
-          node-version: 24
+      # - name: Implementar node
+      #   uses: actions/setup-node@v6
+      #   with:
+      #     node-version: 24
 
-      - name: Install dependencies
-        run: npm install
+      # - name: Install dependencies
+      #   run: npm install
 
-      - name: Iniciar node
-        run: npm run dev
+      # - name: Iniciar node
+      #   run: npm run dev
 
 
 
