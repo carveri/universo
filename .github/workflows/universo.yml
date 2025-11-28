@@ -18,7 +18,10 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::545009863906:role/runicarveri
           aws-region: us-east-1
-    
+
+  correr:
+    runs-on: self-hosted
+    steps:
       - name: Chequear todo el codigo nuevo
         uses: actions/checkout@v4   
 
@@ -28,8 +31,6 @@ jobs:
             node-version: 25
             cache: 'npm'
       - run: npm i 
-      
-
 
             
 
