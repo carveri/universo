@@ -19,8 +19,19 @@ jobs:
           role-to-assume: arn:aws:iam::545009863906:role/runicarveri
           aws-region: us-east-1
     
-      - name: Use Node.js 25
+      - name: Chequear todo el codigo nuevo
         uses: actions/checkout@v4   
+
+      - name: Usar la accion pre hecha para trabajar con node
+        uses: actions/setup-node@v3
+        with:
+            node-version: 25
+            cache: 'npm'
+      - run: npm i 
+      
+
+
+            
 
 
 
