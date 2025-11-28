@@ -18,3 +18,24 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::545009863906:role/runicarveri
           aws-region: us-east-1
+    
+      - name: Use Node.js 25
+        uses: actions/checkout@v4   
+
+
+
+
+
+
+
+
+
+
+
+
+          
+    
+
+          
+
+    
