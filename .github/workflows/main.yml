@@ -5,11 +5,12 @@ on:
   push:
     branches:
       - main
-permissions:
-  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
     steps:
       - name: Confuguracion de las credenciales de aws
         uses: aws-actions/configure-aws-credentials@v5.1.1
